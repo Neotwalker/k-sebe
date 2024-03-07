@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Title</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#FFFFFF">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#FFFFFF">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#FFFFFF">
+
+	<link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body class="page--catalog">
+
+	<div class="main--wrapper">
+
+		<header class="header">
+			<div class="container">
+				<div class="row">
+					<div class="header--wrapper">
+						<a href="/" class="header--logo" title="На главную">
+							<img src="img/logo.png" alt="К себе - каталог психологов">
+						</a>
+						<div class="header--block">
+							<nav class="header--menu">
+								<ul class="menu">
+									<li><a href="catalog.html">Каталог психологов</a></li>
+									<li><a href="#">Специалистам</a></li>
+									<li><a href="#">О сервисе</a></li>
+									<li><a href="#">Блог</a></li>
+								</ul>
+							</nav>
+							<div class="header--logIn">
+								<button class="button">Войти</button>
+							</div>
+						</div>
+						<div class="header--burger">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="main catalog">
+			<section class="main--header">
+				<div class="container">
+					<div class="row">
+						<div class="main--header__wrapper">
+							<div class="main--header__info">
+								<h1 class="h1">Клинические психологи, работающие с&nbsp;депрессией</h1>
+								<div class="main--header__info--subtitle">
+									<strong>Средняя стоимость приёма:</strong>
+									<span>4500 руб.</span>
+								</div>
+								<div class="main--header__tags">
+									<div class="main--header__tag">только специалисты с высшим образованием</div>
+								</div>
+							</div>
+							<div class="main--header__image">
+								<img src="img/header-bg.png">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="catalog--psychologists">
+				<div class="container">
+					<div class="row">
+						<div class="catalog--psychologists__wrapper">
+							<div class="catalog--psychologists__filter">
+								<form action="#">
+									<div class="catalog--psychologists__title">
+										<div class="h3">Фильтры</div>
+										<button class="filter--reset">Сбросить</button>
+									</div>
+									<div class="catalog--psychologists__filter--list">
+										<div class="catalog--psychologists__filter--item">
+											<label for="problem">Ваша проблема</label>
+											<div class="select">
+												<select name="problem" id="problem">
+													<option value="Все" selected>Все</option>
+													<option value="Не все">Не все</option>
+												</select>
+											</div>
+										</div>
+										<div class="catalog--psychologists__filter--item">
+											<label for="method">Методы работы</label>
+											<div class="select">
+												<select name="method" id="method">
+													<option value="Все" selected>Все</option>
+													<option value="Не все">Не все</option>
+												</select>
+											</div>
+										</div>
+										<div class="catalog--psychologists__filter--item">
+											<label>Методы работы</label>
+											<div class="catalog--psychologists__filter--radios">
+												<div class="radio--button">
+													<input class="custom--radio" type="radio" name="format-1" id="format-1" checked>
+													<label for="format-1">Лично</label>
+												</div>
+												<div class="radio--button">
+													<input class="custom--radio" type="radio" name="format-1" id="format-2">
+													<label for="format-2">Онлайн</label>
+												</div>
+											</div>
+										</div>
+										<div class="catalog--psychologists__filter--item">
+											<label for="gender">Пол психолога</label>
+											<div class="select">
+												<select name="gender" id="gender">
+													<option value="Не важно" selected>Не важно</option>
+													<option value="Мужской">Мужской</option>
+													<option value="Женский">Женский</option>
+												</select>
+											</div>
+										</div>
+										<div class="catalog--psychologists__filter--item">
+											<label for="date">Ближайшая дата</label>
+											<div class="select">
+												<select name="date" id="date">
+													<option value="Ближайшие 3 дня" selected>Ближайшие 3 дня</option>
+													<option value="Ближайшие 7 дней">Ближайшие 7 дней</option>
+													<option value="Ближайшие 14 дней">Ближайшие 14 дней</option>
+												</select>
+											</div>
+										</div>
+										<div class="catalog--psychologists__filter--item">
+											<label for="city">Город</label>
+											<div class="select">
+												<select name="city" id="city">
+													<option value="Любой" selected>Любой</option>
+													<option value="Москва">Москва</option>
+													<option value="Санкт-Петербург">Санкт-Петербург</option>
+												</select>
+											</div>
+										</div>
+										<div class="catalog--psychologists__filter--item type--psychologist">
+											<label>Тип психолога</label>
+											<div class="catalog--psychologists__filter--radios">
+												<div class="radio--button">
+													<input class="custom--check" type="checkbox" name="type-1" id="type-1" checked>
+													<label for="type-1">Неважно</label>
+												</div>
+												<div class="radio--button">
+													<input class="custom--check" type="checkbox" name="type-2" id="type-2">
+													<label for="type-2">Взрослый</label>
+												</div>
+												<div class="radio--button">
+													<input class="custom--check" type="checkbox" name="type-3" id="type-3">
+													<label for="type-3">Детский</label>
+												</div>
+												<div class="radio--button">
+													<input class="custom--check" type="checkbox" name="type-4" id="type-4">
+													<label for="type-4">Клинический</label>
+												</div>
+												<div class="radio--button">
+													<input class="custom--check" type="checkbox" name="type-5" id="type-5">
+													<label for="type-5">Нарколог </label>
+												</div>
+												<div class="radio--button">
+													<input class="custom--check" type="checkbox" name="type-6" id="type-6">
+													<label for="type-6">Подростковый </label>
+												</div>
+												<div class="radio--button">
+													<input class="custom--check" type="checkbox" name="type-7" id="type-7">
+													<label for="type-7">Психотерапевт</label>
+												</div>
+												<div class="radio--button">
+													<input class="custom--check" type="checkbox" name="type-8" id="type-8">
+													<label for="type-8">Сексолог </label>
+												</div>
+												<div class="radio--button">
+													<input class="custom--check" type="checkbox" name="type-9" id="type-9">
+													<label for="type-9">Семейный</label>
+												</div>
+											</div>
+										</div>
+										<button class="button button--green filter--reset">Сбросить фильтр</button>
+									</div>
+								</form>
+							</div>
+							<div class="catalog--psychologists__list">
+								<div class="select">
+									<select class="catalog--psychologists__select">
+										<option value="сортировать по цене" selected>сортировать по цене</option>
+										<option value="сортировать по опыту">сортировать по опыту</option>
+										<option value="сортировать по опыту">сортировать по формату сессии</option>
+									</select>
+								</div>
+								<div class="catalog--psychologists__item">
+									<div class="catalog--psychologists__item--header">
+										<div class="catalog--psychologists__item--slider splide splide--avatar">
+											<div class="splide__arrows splide__arrows--ltr">
+												<button class="splide__arrow splide__arrow--prev" disabled="" aria-label="Previous slide" aria-controls="splide02-track">
+													<svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M7.89548 14.3281C7.51246 14.7111 6.89148 14.7111 6.50846 14.3281L0.623847 8.44351C0.240832 8.0605 0.240832 7.43951 0.623847 7.05649L6.50846 1.17188C6.89148 0.788864 7.51247 0.788864 7.89548 1.17188C8.27849 1.55489 8.27849 2.17588 7.89548 2.5589L2.70437 7.75L7.89548 12.9411C8.27849 13.3241 8.27849 13.9451 7.89548 14.3281Z" fill="white"/>
+													</svg>
+												</button>
+												<button class="splide__arrow splide__arrow--next" aria-label="Next slide" aria-controls="splide02-track">
+													<svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M0.604521 1.17187C0.987536 0.788859 1.60852 0.788859 1.99154 1.17187L7.87615 7.05649C8.25917 7.4395 8.25917 8.06049 7.87615 8.44351L1.99154 14.3281C1.60852 14.7111 0.987536 14.7111 0.604521 14.3281C0.221507 13.9451 0.221507 13.3241 0.604521 12.9411L5.79563 7.75L0.604521 2.55889C0.221507 2.17588 0.221507 1.55489 0.604521 1.17187Z" fill="white"/>
+													</svg>
+												</button>
+											</div>
+											<div class="splide__track">
+												<div class="splide__list">
+													<div class="catalog--psychologists__item--slide splide__slide">
+														<img src="img/psychologist.png" alt="Оксана Сизова">
+													</div>
+													<div class="catalog--psychologists__item--slide splide__slide">
+														<img src="img/psychologist.png" alt="Оксана Сизова">
+													</div>
+												</div>
+											</div>
+											<button class="catalog--psychologists__item--video">
+												<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M18 36C20.3638 36 22.7044 35.5344 24.8883 34.6298C27.0722 33.7253 29.0565 32.3994 30.7279 30.7279C32.3994 29.0565 33.7253 27.0722 34.6298 24.8883C35.5344 22.7044 36 20.3638 36 18C36 15.6362 35.5344 13.2956 34.6298 11.1117C33.7253 8.92784 32.3994 6.94353 30.7279 5.27208C29.0565 3.60062 27.0722 2.27475 24.8883 1.37017C22.7044 0.465584 20.3638 -3.52233e-08 18 0C13.2261 7.11366e-08 8.64773 1.89642 5.27208 5.27208C1.89642 8.64773 0 13.2261 0 18C0 22.7739 1.89642 27.3523 5.27208 30.7279C8.64773 34.1036 13.2261 36 18 36ZM15.566 9.98L26.854 16.252C27.1656 16.4253 27.4253 16.6787 27.6061 16.986C27.7868 17.2934 27.8821 17.6434 27.8821 18C27.8821 18.3566 27.7868 18.7066 27.6061 19.014C27.4253 19.3213 27.1656 19.5747 26.854 19.748L15.566 26.02C15.2005 26.2232 14.7883 26.3273 14.3701 26.3221C13.952 26.3169 13.5425 26.2025 13.1821 25.9903C12.8218 25.7781 12.5232 25.4755 12.3158 25.1123C12.1085 24.7492 11.9996 24.3382 12 23.92V12.08C11.9996 11.6618 12.1085 11.2508 12.3158 10.8877C12.5232 10.5245 12.8218 10.2219 13.1821 10.0097C13.5425 9.79748 13.952 9.68311 14.3701 9.67791C14.7883 9.6727 15.2005 9.77684 15.566 9.98Z" fill="white" fill-opacity="0.8"/>
+												</svg>
+											</button>
+											<div class="catalog--psychologists__item--popupVideos modal">
+												<div class="modal--wrapper">
+													<div class="modal--close">
+														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M0.43934 0.43934C1.02513 -0.146447 1.97487 -0.146447 2.56066 0.43934L23.5607 21.4393C24.1464 22.0251 24.1464 22.9749 23.5607 23.5607C22.9749 24.1464 22.0251 24.1464 21.4393 23.5607L0.43934 2.56066C-0.146447 1.97487 -0.146447 1.02513 0.43934 0.43934Z" fill="white"/>
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M23.5607 0.43934C24.1464 1.02513 24.1464 1.97487 23.5607 2.56066L2.56066 23.5607C1.97487 24.1464 1.02513 24.1464 0.43934 23.5607C-0.146447 22.9749 -0.146447 22.0251 0.43934 21.4393L21.4393 0.43934C22.0251 -0.146447 22.9749 -0.146447 23.5607 0.43934Z" fill="white"/>
+														</svg>
+													</div>
+													<div class="splide splide--video">
+														<div class="splide__arrows">
+															<button class="splide__arrow splide__arrow--prev">
+																<svg width="26" height="17" viewBox="0 0 26 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path d="M1.5 8.5H25M25 8.5L17.5 1M25 8.5L17.5 16" stroke="#697E3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+																</svg>
+															</button>
+															<button class="splide__arrow splide__arrow--next">
+																<svg width="26" height="17" viewBox="0 0 26 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path d="M1.5 8.5H25M25 8.5L17.5 1M25 8.5L17.5 16" stroke="#697E3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+																</svg>
+															</button>
+														</div>
+														<div class="splide__track">
+															<div class="splide__list">
+																<div class="catalog--psychologists__item--popupVideo splide__slide">
+																	<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/czcrlqjVkfw?si=XqAAdgJRbdm5M7Jc&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+																</div>
+																<div class="catalog--psychologists__item--popupVideo splide__slide">
+																	<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/czcrlqjVkfw?si=XqAAdgJRbdm5M7Jc&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="catalog--psychologists__item--header__info">
+											<div class="catalog--psychologists__item--header__top">
+												<div class="catalog--psychologists__item--header__top--left">
+													<div class="h4">Оксана Сизова</div>
+													<span>Психотерапевт, 30 лет</span>
+												</div>
+												<button class="catalog--psychologists__item--like">
+													<svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M8.63548 0.489402C7.87777 0.166301 7.06563 0 6.24545 0C5.42527 0 4.61312 0.166301 3.85541 0.489402C3.09784 0.812444 2.40952 1.2859 1.82977 1.88273C1.24983 2.47937 0.789455 3.18806 0.475555 3.96769C0.161596 4.74746 0 5.58326 0 6.42732C0 7.27139 0.161596 8.10719 0.475555 8.88696C0.789484 9.66667 1.2496 10.3751 1.82961 10.9718L10.321 19.7105C10.6962 20.0965 11.3044 20.0965 11.6795 19.7105L20.1709 10.9718C21.3421 9.7665 22 8.13182 22 6.42732C22 4.72283 21.3421 3.08815 20.1709 1.88289C18.9997 0.677636 17.4113 0.000528645 15.7551 0.000528645C14.0988 0.000528645 12.5104 0.677636 11.3392 1.88289L11.0003 2.23174L10.6614 1.88306C10.0817 1.28615 9.39312 0.812474 8.63548 0.489402Z" fill="#E9F0DB"/>
+													</svg>
+												</button>
+											</div>
+											<div class="catalog--psychologists__item--header__rating">
+												<div class="main--reviews__slide--rate">
+													<span>5.0</span>
+													<img src="img/rate.png">
+												</div>
+												<a href="#" class="catalog--psychologists__item--header__reviews">
+													<svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M14.529 0.765488H1.59659C0.718465 0.765488 0 1.48395 0 2.36208V14.5361C0 15.4142 1.03778 15.8133 1.6365 15.2146L3.19318 13.6579H14.489C15.3672 13.6579 16.0856 12.9395 16.0856 12.0614V2.36208C16.1255 1.48395 15.4071 0.765488 14.529 0.765488ZM11.7748 6.27372H4.3507C3.71207 6.27372 3.23309 5.75483 3.23309 5.15611C3.23309 4.51747 3.75198 4.03849 4.3507 4.03849H11.7748C12.4135 4.03849 12.8925 4.55739 12.8925 5.15611C12.8925 5.75483 12.4135 6.27372 11.7748 6.27372ZM9.65936 9.86604H4.3507C3.71207 9.86604 3.23309 9.34715 3.23309 8.74843C3.23309 8.1098 3.75198 7.63082 4.3507 7.63082H9.65936C10.298 7.63082 10.777 8.14971 10.777 8.74843C10.8169 9.34715 10.298 9.86604 9.65936 9.86604Z" fill="#697E3C"/>
+													</svg>
+													<span>14 отзывов</span>
+												</a>
+											</div>
+											<div class="catalog--psychologists__item--header__tags">
+												<div class="catalog--psychologists__item--header__tag">
+													<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M0 8.5C0 3.80716 3.80716 0 8.5 0C13.1928 0 17 3.80716 17 8.5C17 13.1928 13.1928 17 8.5 17C3.80716 17 0 13.1928 0 8.5ZM8.5 1.30769C4.52938 1.30769 1.30769 4.52938 1.30769 8.5C1.30769 12.4706 4.52938 15.6923 8.5 15.6923C12.4706 15.6923 15.6923 12.4706 15.6923 8.5C15.6923 4.52938 12.4706 1.30769 8.5 1.30769Z" fill="#697E3C"/>
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M12.8434 4.73011C13.1199 4.96237 13.1558 5.37481 12.9235 5.65131L7.4312 12.1898C7.30948 12.3347 7.13094 12.4197 6.94172 12.423C6.75249 12.4262 6.57115 12.3473 6.44455 12.2066L4.0907 9.59124C3.84913 9.32283 3.87089 8.90941 4.1393 8.66784C4.40771 8.42627 4.82113 8.44803 5.0627 8.71644L6.91353 10.7729L11.9222 4.81022C12.1545 4.53371 12.5669 4.49785 12.8434 4.73011Z" fill="#697E3C"/>
+													</svg>
+													<span>Опыт 6 лет</span>
+												</div>
+												<div class="catalog--psychologists__item--header__tag">
+													<span>очно и онлайн</span>
+												</div>
+											</div>
+											<div class="catalog--psychologists__item--header__text">
+												<div class="catalog--psychologists__item--header__block">
+													<strong>Город:</strong>
+													<span>Москва, ст. Октябрьская</span>
+												</div>
+												<div class="catalog--psychologists__item--header__block">
+													<strong>Методы:</strong>
+													<span>гештальт, психодрама, семейная терапия</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="catalog--psychologists__item--footer">
+										<div class="catalog--psychologists__item--specializations">
+											<div class="h4">Специализация</div>
+											<div class="catalog--psychologists__item--specializations__list">
+												<div class="catalog--psychologists__item--specializations__item">
+													<svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12.4234 0.243335C12.501 0.320745 12.5625 0.412704 12.6046 0.513946C12.6466 0.615188 12.6682 0.723723 12.6682 0.833335C12.6682 0.942947 12.6466 1.05148 12.6046 1.15272C12.5625 1.25397 12.501 1.34593 12.4234 1.42334L4.92337 8.92334C4.84596 9.00094 4.754 9.06251 4.65276 9.10452C4.55152 9.14653 4.44298 9.16816 4.33337 9.16816C4.22376 9.16816 4.11522 9.14653 4.01398 9.10452C3.91274 9.06251 3.82078 9.00094 3.74337 8.92334L0.410035 5.59C0.253557 5.43352 0.165649 5.22129 0.165649 5C0.165649 4.77871 0.253557 4.56648 0.410035 4.41C0.566513 4.25352 0.778742 4.16562 1.00004 4.16562C1.22133 4.16562 1.43356 4.25352 1.59004 4.41L4.33337 7.155L11.2434 0.243335C11.3208 0.16573 11.4127 0.104159 11.514 0.0621478C11.6152 0.020137 11.7238 -0.00148773 11.8334 -0.00148773C11.943 -0.00148773 12.0515 0.020137 12.1528 0.0621478C12.254 0.104159 12.346 0.16573 12.4234 0.243335Z" fill="#697E3C"/>
+													</svg>
+													<span>Переезд, эмиграция</span>
+												</div>
+												<div class="catalog--psychologists__item--specializations__item">
+													<svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12.4234 0.243335C12.501 0.320745 12.5625 0.412704 12.6046 0.513946C12.6466 0.615188 12.6682 0.723723 12.6682 0.833335C12.6682 0.942947 12.6466 1.05148 12.6046 1.15272C12.5625 1.25397 12.501 1.34593 12.4234 1.42334L4.92337 8.92334C4.84596 9.00094 4.754 9.06251 4.65276 9.10452C4.55152 9.14653 4.44298 9.16816 4.33337 9.16816C4.22376 9.16816 4.11522 9.14653 4.01398 9.10452C3.91274 9.06251 3.82078 9.00094 3.74337 8.92334L0.410035 5.59C0.253557 5.43352 0.165649 5.22129 0.165649 5C0.165649 4.77871 0.253557 4.56648 0.410035 4.41C0.566513 4.25352 0.778742 4.16562 1.00004 4.16562C1.22133 4.16562 1.43356 4.25352 1.59004 4.41L4.33337 7.155L11.2434 0.243335C11.3208 0.16573 11.4127 0.104159 11.514 0.0621478C11.6152 0.020137 11.7238 -0.00148773 11.8334 -0.00148773C11.943 -0.00148773 12.0515 0.020137 12.1528 0.0621478C12.254 0.104159 12.346 0.16573 12.4234 0.243335Z" fill="#697E3C"/>
+													</svg>
+													<span>Выгорание</span>
+												</div>
+												<div class="catalog--psychologists__item--specializations__item">
+													<svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12.4234 0.243335C12.501 0.320745 12.5625 0.412704 12.6046 0.513946C12.6466 0.615188 12.6682 0.723723 12.6682 0.833335C12.6682 0.942947 12.6466 1.05148 12.6046 1.15272C12.5625 1.25397 12.501 1.34593 12.4234 1.42334L4.92337 8.92334C4.84596 9.00094 4.754 9.06251 4.65276 9.10452C4.55152 9.14653 4.44298 9.16816 4.33337 9.16816C4.22376 9.16816 4.11522 9.14653 4.01398 9.10452C3.91274 9.06251 3.82078 9.00094 3.74337 8.92334L0.410035 5.59C0.253557 5.43352 0.165649 5.22129 0.165649 5C0.165649 4.77871 0.253557 4.56648 0.410035 4.41C0.566513 4.25352 0.778742 4.16562 1.00004 4.16562C1.22133 4.16562 1.43356 4.25352 1.59004 4.41L4.33337 7.155L11.2434 0.243335C11.3208 0.16573 11.4127 0.104159 11.514 0.0621478C11.6152 0.020137 11.7238 -0.00148773 11.8334 -0.00148773C11.943 -0.00148773 12.0515 0.020137 12.1528 0.0621478C12.254 0.104159 12.346 0.16573 12.4234 0.243335Z" fill="#697E3C"/>
+													</svg>
+													<span>Депрессия</span>
+												</div>
+												<div class="catalog--psychologists__item--specializations__item">
+													<svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12.4234 0.243335C12.501 0.320745 12.5625 0.412704 12.6046 0.513946C12.6466 0.615188 12.6682 0.723723 12.6682 0.833335C12.6682 0.942947 12.6466 1.05148 12.6046 1.15272C12.5625 1.25397 12.501 1.34593 12.4234 1.42334L4.92337 8.92334C4.84596 9.00094 4.754 9.06251 4.65276 9.10452C4.55152 9.14653 4.44298 9.16816 4.33337 9.16816C4.22376 9.16816 4.11522 9.14653 4.01398 9.10452C3.91274 9.06251 3.82078 9.00094 3.74337 8.92334L0.410035 5.59C0.253557 5.43352 0.165649 5.22129 0.165649 5C0.165649 4.77871 0.253557 4.56648 0.410035 4.41C0.566513 4.25352 0.778742 4.16562 1.00004 4.16562C1.22133 4.16562 1.43356 4.25352 1.59004 4.41L4.33337 7.155L11.2434 0.243335C11.3208 0.16573 11.4127 0.104159 11.514 0.0621478C11.6152 0.020137 11.7238 -0.00148773 11.8334 -0.00148773C11.943 -0.00148773 12.0515 0.020137 12.1528 0.0621478C12.254 0.104159 12.346 0.16573 12.4234 0.243335Z" fill="#697E3C"/>
+													</svg>
+													<span>Чувство одиночества</span>
+												</div>
+												<div class="catalog--psychologists__item--specializations__item">
+													<svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12.4234 0.243335C12.501 0.320745 12.5625 0.412704 12.6046 0.513946C12.6466 0.615188 12.6682 0.723723 12.6682 0.833335C12.6682 0.942947 12.6466 1.05148 12.6046 1.15272C12.5625 1.25397 12.501 1.34593 12.4234 1.42334L4.92337 8.92334C4.84596 9.00094 4.754 9.06251 4.65276 9.10452C4.55152 9.14653 4.44298 9.16816 4.33337 9.16816C4.22376 9.16816 4.11522 9.14653 4.01398 9.10452C3.91274 9.06251 3.82078 9.00094 3.74337 8.92334L0.410035 5.59C0.253557 5.43352 0.165649 5.22129 0.165649 5C0.165649 4.77871 0.253557 4.56648 0.410035 4.41C0.566513 4.25352 0.778742 4.16562 1.00004 4.16562C1.22133 4.16562 1.43356 4.25352 1.59004 4.41L4.33337 7.155L11.2434 0.243335C11.3208 0.16573 11.4127 0.104159 11.514 0.0621478C11.6152 0.020137 11.7238 -0.00148773 11.8334 -0.00148773C11.943 -0.00148773 12.0515 0.020137 12.1528 0.0621478C12.254 0.104159 12.346 0.16573 12.4234 0.243335Z" fill="#697E3C"/>
+													</svg>
+													<span>Отношения в паре</span>
+												</div>
+												<div class="catalog--psychologists__item--specializations__item">
+													<svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12.4234 0.243335C12.501 0.320745 12.5625 0.412704 12.6046 0.513946C12.6466 0.615188 12.6682 0.723723 12.6682 0.833335C12.6682 0.942947 12.6466 1.05148 12.6046 1.15272C12.5625 1.25397 12.501 1.34593 12.4234 1.42334L4.92337 8.92334C4.84596 9.00094 4.754 9.06251 4.65276 9.10452C4.55152 9.14653 4.44298 9.16816 4.33337 9.16816C4.22376 9.16816 4.11522 9.14653 4.01398 9.10452C3.91274 9.06251 3.82078 9.00094 3.74337 8.92334L0.410035 5.59C0.253557 5.43352 0.165649 5.22129 0.165649 5C0.165649 4.77871 0.253557 4.56648 0.410035 4.41C0.566513 4.25352 0.778742 4.16562 1.00004 4.16562C1.22133 4.16562 1.43356 4.25352 1.59004 4.41L4.33337 7.155L11.2434 0.243335C11.3208 0.16573 11.4127 0.104159 11.514 0.0621478C11.6152 0.020137 11.7238 -0.00148773 11.8334 -0.00148773C11.943 -0.00148773 12.0515 0.020137 12.1528 0.0621478C12.254 0.104159 12.346 0.16573 12.4234 0.243335Z" fill="#697E3C"/>
+													</svg>
+													<span>Потеря мотивации</span>
+												</div>
+												<div class="catalog--psychologists__item--specializations__item">
+													<svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12.4234 0.243335C12.501 0.320745 12.5625 0.412704 12.6046 0.513946C12.6466 0.615188 12.6682 0.723723 12.6682 0.833335C12.6682 0.942947 12.6466 1.05148 12.6046 1.15272C12.5625 1.25397 12.501 1.34593 12.4234 1.42334L4.92337 8.92334C4.84596 9.00094 4.754 9.06251 4.65276 9.10452C4.55152 9.14653 4.44298 9.16816 4.33337 9.16816C4.22376 9.16816 4.11522 9.14653 4.01398 9.10452C3.91274 9.06251 3.82078 9.00094 3.74337 8.92334L0.410035 5.59C0.253557 5.43352 0.165649 5.22129 0.165649 5C0.165649 4.77871 0.253557 4.56648 0.410035 4.41C0.566513 4.25352 0.778742 4.16562 1.00004 4.16562C1.22133 4.16562 1.43356 4.25352 1.59004 4.41L4.33337 7.155L11.2434 0.243335C11.3208 0.16573 11.4127 0.104159 11.514 0.0621478C11.6152 0.020137 11.7238 -0.00148773 11.8334 -0.00148773C11.943 -0.00148773 12.0515 0.020137 12.1528 0.0621478C12.254 0.104159 12.346 0.16573 12.4234 0.243335Z" fill="#697E3C"/>
+													</svg>
+													<span>Созависимые отношения</span>
+												</div>
+												<div class="catalog--psychologists__item--specializations__item">
+													<svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12.4234 0.243335C12.501 0.320745 12.5625 0.412704 12.6046 0.513946C12.6466 0.615188 12.6682 0.723723 12.6682 0.833335C12.6682 0.942947 12.6466 1.05148 12.6046 1.15272C12.5625 1.25397 12.501 1.34593 12.4234 1.42334L4.92337 8.92334C4.84596 9.00094 4.754 9.06251 4.65276 9.10452C4.55152 9.14653 4.44298 9.16816 4.33337 9.16816C4.22376 9.16816 4.11522 9.14653 4.01398 9.10452C3.91274 9.06251 3.82078 9.00094 3.74337 8.92334L0.410035 5.59C0.253557 5.43352 0.165649 5.22129 0.165649 5C0.165649 4.77871 0.253557 4.56648 0.410035 4.41C0.566513 4.25352 0.778742 4.16562 1.00004 4.16562C1.22133 4.16562 1.43356 4.25352 1.59004 4.41L4.33337 7.155L11.2434 0.243335C11.3208 0.16573 11.4127 0.104159 11.514 0.0621478C11.6152 0.020137 11.7238 -0.00148773 11.8334 -0.00148773C11.943 -0.00148773 12.0515 0.020137 12.1528 0.0621478C12.254 0.104159 12.346 0.16573 12.4234 0.243335Z" fill="#697E3C"/>
+													</svg>
+													<span>Личные границы</span>
+												</div>
+												<div class="catalog--psychologists__item--specializations__item">
+													<svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12.4234 0.243335C12.501 0.320745 12.5625 0.412704 12.6046 0.513946C12.6466 0.615188 12.6682 0.723723 12.6682 0.833335C12.6682 0.942947 12.6466 1.05148 12.6046 1.15272C12.5625 1.25397 12.501 1.34593 12.4234 1.42334L4.92337 8.92334C4.84596 9.00094 4.754 9.06251 4.65276 9.10452C4.55152 9.14653 4.44298 9.16816 4.33337 9.16816C4.22376 9.16816 4.11522 9.14653 4.01398 9.10452C3.91274 9.06251 3.82078 9.00094 3.74337 8.92334L0.410035 5.59C0.253557 5.43352 0.165649 5.22129 0.165649 5C0.165649 4.77871 0.253557 4.56648 0.410035 4.41C0.566513 4.25352 0.778742 4.16562 1.00004 4.16562C1.22133 4.16562 1.43356 4.25352 1.59004 4.41L4.33337 7.155L11.2434 0.243335C11.3208 0.16573 11.4127 0.104159 11.514 0.0621478C11.6152 0.020137 11.7238 -0.00148773 11.8334 -0.00148773C11.943 -0.00148773 12.0515 0.020137 12.1528 0.0621478C12.254 0.104159 12.346 0.16573 12.4234 0.243335Z" fill="#697E3C"/>
+													</svg>
+													<span>Тревожность</span>
+												</div>
+												<button class="catalog--psychologists__item--specializations__all">
+													<span>Смотреть все</span>
+													<svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12.1406 7.35944L6.50005 13L0.859467 7.35944" stroke="#2A2A2A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+														<path d="M6.5 12.9999L6.5 1" stroke="#2A2A2A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+													</svg>
+												</button>
+											</div>
+										</div>
+										<div class="catalog--psychologists__item--price">
+											<span>Стоимость онлайн консультации</span>
+											<strong>3000₽</strong>
+										</div>
+										<a href="catalog-cart.html" class="button">Подробнее о психологе</a>
+									</div>
+								</div>
+								<div class="catalog--psychologists__item">
+									<div class="catalog--psychologists__item--header">
+										<div class="catalog--psychologists__item--slider splide splide--avatar">
+											<div class="splide__arrows splide__arrows--ltr">
+												<button class="splide__arrow splide__arrow--prev" disabled="" aria-label="Previous slide" aria-controls="splide02-track">
+													<svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M7.89548 14.3281C7.51246 14.7111 6.89148 14.7111 6.50846 14.3281L0.623847 8.44351C0.240832 8.0605 0.240832 7.43951 0.623847 7.05649L6.50846 1.17188C6.89148 0.788864 7.51247 0.788864 7.89548 1.17188C8.27849 1.55489 8.27849 2.17588 7.89548 2.5589L2.70437 7.75L7.89548 12.9411C8.27849 13.3241 8.27849 13.9451 7.89548 14.3281Z" fill="white"/>
+													</svg>
+												</button>
+												<button class="splide__arrow splide__arrow--next" aria-label="Next slide" aria-controls="splide02-track">
+													<svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M0.604521 1.17187C0.987536 0.788859 1.60852 0.788859 1.99154 1.17187L7.87615 7.05649C8.25917 7.4395 8.25917 8.06049 7.87615 8.44351L1.99154 14.3281C1.60852 14.7111 0.987536 14.7111 0.604521 14.3281C0.221507 13.9451 0.221507 13.3241 0.604521 12.9411L5.79563 7.75L0.604521 2.55889C0.221507 2.17588 0.221507 1.55489 0.604521 1.17187Z" fill="white"/>
+													</svg>
+												</button>
+											</div>
+											<div class="splide__track">
+												<div class="splide__list">
+													<div class="catalog--psychologists__item--slide splide__slide">
+														<img src="img/psychologist.png" alt="Оксана Сизова">
+													</div>
+													<div class="catalog--psychologists__item--slide splide__slide">
+														<img src="img/psychologist.png" alt="Оксана Сизова">
+													</div>
+												</div>
+											</div>
+											<button class="catalog--psychologists__item--video">
+												<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M18 36C20.3638 36 22.7044 35.5344 24.8883 34.6298C27.0722 33.7253 29.0565 32.3994 30.7279 30.7279C32.3994 29.0565 33.7253 27.0722 34.6298 24.8883C35.5344 22.7044 36 20.3638 36 18C36 15.6362 35.5344 13.2956 34.6298 11.1117C33.7253 8.92784 32.3994 6.94353 30.7279 5.27208C29.0565 3.60062 27.0722 2.27475 24.8883 1.37017C22.7044 0.465584 20.3638 -3.52233e-08 18 0C13.2261 7.11366e-08 8.64773 1.89642 5.27208 5.27208C1.89642 8.64773 0 13.2261 0 18C0 22.7739 1.89642 27.3523 5.27208 30.7279C8.64773 34.1036 13.2261 36 18 36ZM15.566 9.98L26.854 16.252C27.1656 16.4253 27.4253 16.6787 27.6061 16.986C27.7868 17.2934 27.8821 17.6434 27.8821 18C27.8821 18.3566 27.7868 18.7066 27.6061 19.014C27.4253 19.3213 27.1656 19.5747 26.854 19.748L15.566 26.02C15.2005 26.2232 14.7883 26.3273 14.3701 26.3221C13.952 26.3169 13.5425 26.2025 13.1821 25.9903C12.8218 25.7781 12.5232 25.4755 12.3158 25.1123C12.1085 24.7492 11.9996 24.3382 12 23.92V12.08C11.9996 11.6618 12.1085 11.2508 12.3158 10.8877C12.5232 10.5245 12.8218 10.2219 13.1821 10.0097C13.5425 9.79748 13.952 9.68311 14.3701 9.67791C14.7883 9.6727 15.2005 9.77684 15.566 9.98Z" fill="white" fill-opacity="0.8"/>
+												</svg>
+											</button>
+											<div class="catalog--psychologists__item--popupVideos modal">
+												<div class="modal--wrapper">
+													<div class="modal--close">
+														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M0.43934 0.43934C1.02513 -0.146447 1.97487 -0.146447 2.56066 0.43934L23.5607 21.4393C24.1464 22.0251 24.1464 22.9749 23.5607 23.5607C22.9749 24.1464 22.0251 24.1464 21.4393 23.5607L0.43934 2.56066C-0.146447 1.97487 -0.146447 1.02513 0.43934 0.43934Z" fill="white"/>
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M23.5607 0.43934C24.1464 1.02513 24.1464 1.97487 23.5607 2.56066L2.56066 23.5607C1.97487 24.1464 1.02513 24.1464 0.43934 23.5607C-0.146447 22.9749 -0.146447 22.0251 0.43934 21.4393L21.4393 0.43934C22.0251 -0.146447 22.9749 -0.146447 23.5607 0.43934Z" fill="white"/>
+														</svg>
+													</div>
+													<div class="splide splide--video">
+														<div class="splide__arrows">
+															<button class="splide__arrow splide__arrow--prev">
+																<svg width="26" height="17" viewBox="0 0 26 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path d="M1.5 8.5H25M25 8.5L17.5 1M25 8.5L17.5 16" stroke="#697E3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+																</svg>
+															</button>
+															<button class="splide__arrow splide__arrow--next">
+																<svg width="26" height="17" viewBox="0 0 26 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path d="M1.5 8.5H25M25 8.5L17.5 1M25 8.5L17.5 16" stroke="#697E3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+																</svg>
+															</button>
+														</div>
+														<div class="splide__track">
+															<div class="splide__list">
+																<div class="catalog--psychologists__item--popupVideo splide__slide">
+																	<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/czcrlqjVkfw?si=XqAAdgJRbdm5M7Jc&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+																</div>
+																<div class="catalog--psychologists__item--popupVideo splide__slide">
+																	<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/czcrlqjVkfw?si=XqAAdgJRbdm5M7Jc&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="catalog--psychologists__item--header__info">
+											<div class="catalog--psychologists__item--header__top">
+												<div class="catalog--psychologists__item--header__top--left">
+													<div class="h4">Оксана Сизова</div>
+													<span>Психотерапевт, 30 лет</span>
+												</div>
+												<button class="catalog--psychologists__item--like">
+													<svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M8.63548 0.489402C7.87777 0.166301 7.06563 0 6.24545 0C5.42527 0 4.61312 0.166301 3.85541 0.489402C3.09784 0.812444 2.40952 1.2859 1.82977 1.88273C1.24983 2.47937 0.789455 3.18806 0.475555 3.96769C0.161596 4.74746 0 5.58326 0 6.42732C0 7.27139 0.161596 8.10719 0.475555 8.88696C0.789484 9.66667 1.2496 10.3751 1.82961 10.9718L10.321 19.7105C10.6962 20.0965 11.3044 20.0965 11.6795 19.7105L20.1709 10.9718C21.3421 9.7665 22 8.13182 22 6.42732C22 4.72283 21.3421 3.08815 20.1709 1.88289C18.9997 0.677636 17.4113 0.000528645 15.7551 0.000528645C14.0988 0.000528645 12.5104 0.677636 11.3392 1.88289L11.0003 2.23174L10.6614 1.88306C10.0817 1.28615 9.39312 0.812474 8.63548 0.489402Z" fill="#E9F0DB"/>
+													</svg>
+												</button>
+											</div>
+											<div class="catalog--psychologists__item--header__rating">
+												<div class="main--reviews__slide--rate">
+													<span>5.0</span>
+													<img src="img/rate.png">
+												</div>
+												<a href="#" class="catalog--psychologists__item--header__reviews">
+													<svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M14.529 0.765488H1.59659C0.718465 0.765488 0 1.48395 0 2.36208V14.5361C0 15.4142 1.03778 15.8133 1.6365 15.2146L3.19318 13.6579H14.489C15.3672 13.6579 16.0856 12.9395 16.0856 12.0614V2.36208C16.1255 1.48395 15.4071 0.765488 14.529 0.765488ZM11.7748 6.27372H4.3507C3.71207 6.27372 3.23309 5.75483 3.23309 5.15611C3.23309 4.51747 3.75198 4.03849 4.3507 4.03849H11.7748C12.4135 4.03849 12.8925 4.55739 12.8925 5.15611C12.8925 5.75483 12.4135 6.27372 11.7748 6.27372ZM9.65936 9.86604H4.3507C3.71207 9.86604 3.23309 9.34715 3.23309 8.74843C3.23309 8.1098 3.75198 7.63082 4.3507 7.63082H9.65936C10.298 7.63082 10.777 8.14971 10.777 8.74843C10.8169 9.34715 10.298 9.86604 9.65936 9.86604Z" fill="#697E3C"/>
+													</svg>
+													<span>14 отзывов</span>
+												</a>
+											</div>
+											<div class="catalog--psychologists__item--header__tags">
+												<div class="catalog--psychologists__item--header__tag">
+													<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M0 8.5C0 3.80716 3.80716 0 8.5 0C13.1928 0 17 3.80716 17 8.5C17 13.1928 13.1928 17 8.5 17C3.80716 17 0 13.1928 0 8.5ZM8.5 1.30769C4.52938 1.30769 1.30769 4.52938 1.30769 8.5C1.30769 12.4706 4.52938 15.6923 8.5 15.6923C12.4706 15.6923 15.6923 12.4706 15.6923 8.5C15.6923 4.52938 12.4706 1.30769 8.5 1.30769Z" fill="#697E3C"/>
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M12.8434 4.73011C13.1199 4.96237 13.1558 5.37481 12.9235 5.65131L7.4312 12.1898C7.30948 12.3347 7.13094 12.4197 6.94172 12.423C6.75249 12.4262 6.57115 12.3473 6.44455 12.2066L4.0907 9.59124C3.84913 9.32283 3.87089 8.90941 4.1393 8.66784C4.40771 8.42627 4.82113 8.44803 5.0627 8.71644L6.91353 10.7729L11.9222 4.81022C12.1545 4.53371 12.5669 4.49785 12.8434 4.73011Z" fill="#697E3C"/>
+													</svg>
+													<span>Опыт 6 лет</span>
+												</div>
+												<div class="catalog--psychologists__item--header__tag">
+													<span>очно и онлайн</span>
+												</div>
+											</div>
+											<div class="catalog--psychologists__item--header__text">
+												<div class="catalog--psychologists__item--header__block">
+													<strong>Город:</strong>
+													<span>Москва, ст. Октябрьская</span>
+												</div>
+												<div class="catalog--psychologists__item--header__block">
+													<strong>Методы:</strong>
+													<span>гештальт, психодрама, семейная терапия</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="catalog--psychologists__item--footer">
+										<div class="catalog--psychologists__item--specializations">
+											<div class="h4">Специализация</div>
+											<div class="catalog--psychologists__item--specializations__list">
+												<div class="catalog--psychologists__item--specializations__item">
+													<svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12.4234 0.243335C12.501 0.320745 12.5625 0.412704 12.6046 0.513946C12.6466 0.615188 12.6682 0.723723 12.6682 0.833335C12.6682 0.942947 12.6466 1.05148 12.6046 1.15272C12.5625 1.25397 12.501 1.34593 12.4234 1.42334L4.92337 8.92334C4.84596 9.00094 4.754 9.06251 4.65276 9.10452C4.55152 9.14653 4.44298 9.16816 4.33337 9.16816C4.22376 9.16816 4.11522 9.14653 4.01398 9.10452C3.91274 9.06251 3.82078 9.00094 3.74337 8.92334L0.410035 5.59C0.253557 5.43352 0.165649 5.22129 0.165649 5C0.165649 4.77871 0.253557 4.56648 0.410035 4.41C0.566513 4.25352 0.778742 4.16562 1.00004 4.16562C1.22133 4.16562 1.43356 4.25352 1.59004 4.41L4.33337 7.155L11.2434 0.243335C11.3208 0.16573 11.4127 0.104159 11.514 0.0621478C11.6152 0.020137 11.7238 -0.00148773 11.8334 -0.00148773C11.943 -0.00148773 12.0515 0.020137 12.1528 0.0621478C12.254 0.104159 12.346 0.16573 12.4234 0.243335Z" fill="#697E3C"/>
+													</svg>
+													<span>Переезд, эмиграция</span>
+												</div>
+												<div class="catalog--psychologists__item--specializations__item">
+													<svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12.4234 0.243335C12.501 0.320745 12.5625 0.412704 12.6046 0.513946C12.6466 0.615188 12.6682 0.723723 12.6682 0.833335C12.6682 0.942947 12.6466 1.05148 12.6046 1.15272C12.5625 1.25397 12.501 1.34593 12.4234 1.42334L4.92337 8.92334C4.84596 9.00094 4.754 9.06251 4.65276 9.10452C4.55152 9.14653 4.44298 9.16816 4.33337 9.16816C4.22376 9.16816 4.11522 9.14653 4.01398 9.10452C3.91274 9.06251 3.82078 9.00094 3.74337 8.92334L0.410035 5.59C0.253557 5.43352 0.165649 5.22129 0.165649 5C0.165649 4.77871 0.253557 4.56648 0.410035 4.41C0.566513 4.25352 0.778742 4.16562 1.00004 4.16562C1.22133 4.16562 1.43356 4.25352 1.59004 4.41L4.33337 7.155L11.2434 0.243335C11.3208 0.16573 11.4127 0.104159 11.514 0.0621478C11.6152 0.020137 11.7238 -0.00148773 11.8334 -0.00148773C11.943 -0.00148773 12.0515 0.020137 12.1528 0.0621478C12.254 0.104159 12.346 0.16573 12.4234 0.243335Z" fill="#697E3C"/>
+													</svg>
+													<span>Выгорание</span>
+												</div>
+												<div class="catalog--psychologists__item--specializations__item">
+													<svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12.4234 0.243335C12.501 0.320745 12.5625 0.412704 12.6046 0.513946C12.6466 0.615188 12.6682 0.723723 12.6682 0.833335C12.6682 0.942947 12.6466 1.05148 12.6046 1.15272C12.5625 1.25397 12.501 1.34593 12.4234 1.42334L4.92337 8.92334C4.84596 9.00094 4.754 9.06251 4.65276 9.10452C4.55152 9.14653 4.44298 9.16816 4.33337 9.16816C4.22376 9.16816 4.11522 9.14653 4.01398 9.10452C3.91274 9.06251 3.82078 9.00094 3.74337 8.92334L0.410035 5.59C0.253557 5.43352 0.165649 5.22129 0.165649 5C0.165649 4.77871 0.253557 4.56648 0.410035 4.41C0.566513 4.25352 0.778742 4.16562 1.00004 4.16562C1.22133 4.16562 1.43356 4.25352 1.59004 4.41L4.33337 7.155L11.2434 0.243335C11.3208 0.16573 11.4127 0.104159 11.514 0.0621478C11.6152 0.020137 11.7238 -0.00148773 11.8334 -0.00148773C11.943 -0.00148773 12.0515 0.020137 12.1528 0.0621478C12.254 0.104159 12.346 0.16573 12.4234 0.243335Z" fill="#697E3C"/>
+													</svg>
+													<span>Депрессия</span>
+												</div>
+												<div class="catalog--psychologists__item--specializations__item">
+													<svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12.4234 0.243335C12.501 0.320745 12.5625 0.412704 12.6046 0.513946C12.6466 0.615188 12.6682 0.723723 12.6682 0.833335C12.6682 0.942947 12.6466 1.05148 12.6046 1.15272C12.5625 1.25397 12.501 1.34593 12.4234 1.42334L4.92337 8.92334C4.84596 9.00094 4.754 9.06251 4.65276 9.10452C4.55152 9.14653 4.44298 9.16816 4.33337 9.16816C4.22376 9.16816 4.11522 9.14653 4.01398 9.10452C3.91274 9.06251 3.82078 9.00094 3.74337 8.92334L0.410035 5.59C0.253557 5.43352 0.165649 5.22129 0.165649 5C0.165649 4.77871 0.253557 4.56648 0.410035 4.41C0.566513 4.25352 0.778742 4.16562 1.00004 4.16562C1.22133 4.16562 1.43356 4.25352 1.59004 4.41L4.33337 7.155L11.2434 0.243335C11.3208 0.16573 11.4127 0.104159 11.514 0.0621478C11.6152 0.020137 11.7238 -0.00148773 11.8334 -0.00148773C11.943 -0.00148773 12.0515 0.020137 12.1528 0.0621478C12.254 0.104159 12.346 0.16573 12.4234 0.243335Z" fill="#697E3C"/>
+													</svg>
+													<span>Чувство одиночества</span>
+												</div>
+												<div class="catalog--psychologists__item--specializations__item">
+													<svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12.4234 0.243335C12.501 0.320745 12.5625 0.412704 12.6046 0.513946C12.6466 0.615188 12.6682 0.723723 12.6682 0.833335C12.6682 0.942947 12.6466 1.05148 12.6046 1.15272C12.5625 1.25397 12.501 1.34593 12.4234 1.42334L4.92337 8.92334C4.84596 9.00094 4.754 9.06251 4.65276 9.10452C4.55152 9.14653 4.44298 9.16816 4.33337 9.16816C4.22376 9.16816 4.11522 9.14653 4.01398 9.10452C3.91274 9.06251 3.82078 9.00094 3.74337 8.92334L0.410035 5.59C0.253557 5.43352 0.165649 5.22129 0.165649 5C0.165649 4.77871 0.253557 4.56648 0.410035 4.41C0.566513 4.25352 0.778742 4.16562 1.00004 4.16562C1.22133 4.16562 1.43356 4.25352 1.59004 4.41L4.33337 7.155L11.2434 0.243335C11.3208 0.16573 11.4127 0.104159 11.514 0.0621478C11.6152 0.020137 11.7238 -0.00148773 11.8334 -0.00148773C11.943 -0.00148773 12.0515 0.020137 12.1528 0.0621478C12.254 0.104159 12.346 0.16573 12.4234 0.243335Z" fill="#697E3C"/>
+													</svg>
+													<span>Отношения в паре</span>
+												</div>
+												<div class="catalog--psychologists__item--specializations__item">
+													<svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12.4234 0.243335C12.501 0.320745 12.5625 0.412704 12.6046 0.513946C12.6466 0.615188 12.6682 0.723723 12.6682 0.833335C12.6682 0.942947 12.6466 1.05148 12.6046 1.15272C12.5625 1.25397 12.501 1.34593 12.4234 1.42334L4.92337 8.92334C4.84596 9.00094 4.754 9.06251 4.65276 9.10452C4.55152 9.14653 4.44298 9.16816 4.33337 9.16816C4.22376 9.16816 4.11522 9.14653 4.01398 9.10452C3.91274 9.06251 3.82078 9.00094 3.74337 8.92334L0.410035 5.59C0.253557 5.43352 0.165649 5.22129 0.165649 5C0.165649 4.77871 0.253557 4.56648 0.410035 4.41C0.566513 4.25352 0.778742 4.16562 1.00004 4.16562C1.22133 4.16562 1.43356 4.25352 1.59004 4.41L4.33337 7.155L11.2434 0.243335C11.3208 0.16573 11.4127 0.104159 11.514 0.0621478C11.6152 0.020137 11.7238 -0.00148773 11.8334 -0.00148773C11.943 -0.00148773 12.0515 0.020137 12.1528 0.0621478C12.254 0.104159 12.346 0.16573 12.4234 0.243335Z" fill="#697E3C"/>
+													</svg>
+													<span>Потеря мотивации</span>
+												</div>
+												<div class="catalog--psychologists__item--specializations__item">
+													<svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12.4234 0.243335C12.501 0.320745 12.5625 0.412704 12.6046 0.513946C12.6466 0.615188 12.6682 0.723723 12.6682 0.833335C12.6682 0.942947 12.6466 1.05148 12.6046 1.15272C12.5625 1.25397 12.501 1.34593 12.4234 1.42334L4.92337 8.92334C4.84596 9.00094 4.754 9.06251 4.65276 9.10452C4.55152 9.14653 4.44298 9.16816 4.33337 9.16816C4.22376 9.16816 4.11522 9.14653 4.01398 9.10452C3.91274 9.06251 3.82078 9.00094 3.74337 8.92334L0.410035 5.59C0.253557 5.43352 0.165649 5.22129 0.165649 5C0.165649 4.77871 0.253557 4.56648 0.410035 4.41C0.566513 4.25352 0.778742 4.16562 1.00004 4.16562C1.22133 4.16562 1.43356 4.25352 1.59004 4.41L4.33337 7.155L11.2434 0.243335C11.3208 0.16573 11.4127 0.104159 11.514 0.0621478C11.6152 0.020137 11.7238 -0.00148773 11.8334 -0.00148773C11.943 -0.00148773 12.0515 0.020137 12.1528 0.0621478C12.254 0.104159 12.346 0.16573 12.4234 0.243335Z" fill="#697E3C"/>
+													</svg>
+													<span>Созависимые отношения</span>
+												</div>
+												<div class="catalog--psychologists__item--specializations__item">
+													<svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12.4234 0.243335C12.501 0.320745 12.5625 0.412704 12.6046 0.513946C12.6466 0.615188 12.6682 0.723723 12.6682 0.833335C12.6682 0.942947 12.6466 1.05148 12.6046 1.15272C12.5625 1.25397 12.501 1.34593 12.4234 1.42334L4.92337 8.92334C4.84596 9.00094 4.754 9.06251 4.65276 9.10452C4.55152 9.14653 4.44298 9.16816 4.33337 9.16816C4.22376 9.16816 4.11522 9.14653 4.01398 9.10452C3.91274 9.06251 3.82078 9.00094 3.74337 8.92334L0.410035 5.59C0.253557 5.43352 0.165649 5.22129 0.165649 5C0.165649 4.77871 0.253557 4.56648 0.410035 4.41C0.566513 4.25352 0.778742 4.16562 1.00004 4.16562C1.22133 4.16562 1.43356 4.25352 1.59004 4.41L4.33337 7.155L11.2434 0.243335C11.3208 0.16573 11.4127 0.104159 11.514 0.0621478C11.6152 0.020137 11.7238 -0.00148773 11.8334 -0.00148773C11.943 -0.00148773 12.0515 0.020137 12.1528 0.0621478C12.254 0.104159 12.346 0.16573 12.4234 0.243335Z" fill="#697E3C"/>
+													</svg>
+													<span>Личные границы</span>
+												</div>
+												<div class="catalog--psychologists__item--specializations__item">
+													<svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12.4234 0.243335C12.501 0.320745 12.5625 0.412704 12.6046 0.513946C12.6466 0.615188 12.6682 0.723723 12.6682 0.833335C12.6682 0.942947 12.6466 1.05148 12.6046 1.15272C12.5625 1.25397 12.501 1.34593 12.4234 1.42334L4.92337 8.92334C4.84596 9.00094 4.754 9.06251 4.65276 9.10452C4.55152 9.14653 4.44298 9.16816 4.33337 9.16816C4.22376 9.16816 4.11522 9.14653 4.01398 9.10452C3.91274 9.06251 3.82078 9.00094 3.74337 8.92334L0.410035 5.59C0.253557 5.43352 0.165649 5.22129 0.165649 5C0.165649 4.77871 0.253557 4.56648 0.410035 4.41C0.566513 4.25352 0.778742 4.16562 1.00004 4.16562C1.22133 4.16562 1.43356 4.25352 1.59004 4.41L4.33337 7.155L11.2434 0.243335C11.3208 0.16573 11.4127 0.104159 11.514 0.0621478C11.6152 0.020137 11.7238 -0.00148773 11.8334 -0.00148773C11.943 -0.00148773 12.0515 0.020137 12.1528 0.0621478C12.254 0.104159 12.346 0.16573 12.4234 0.243335Z" fill="#697E3C"/>
+													</svg>
+													<span>Тревожность</span>
+												</div>
+												<button class="catalog--psychologists__item--specializations__all">
+													<span>Смотреть все</span>
+													<svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12.1406 7.35944L6.50005 13L0.859467 7.35944" stroke="#2A2A2A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+														<path d="M6.5 12.9999L6.5 1" stroke="#2A2A2A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+													</svg>
+												</button>
+											</div>
+										</div>
+										<div class="catalog--psychologists__item--price">
+											<span>Стоимость онлайн консультации</span>
+											<strong>3000₽</strong>
+										</div>
+										<a href="catalog-cart.html" class="button">Подробнее о психологе</a>
+									</div>
+								</div>
+								<div class="catalog--psychologists__item">
+									<div class="catalog--psychologists__item--header">
+										<div class="catalog--psychologists__item--slider splide splide--avatar">
+											<div class="splide__arrows splide__arrows--ltr">
+												<button class="splide__arrow splide__arrow--prev" disabled="" aria-label="Previous slide" aria-controls="splide02-track">
+													<svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M7.89548 14.3281C7.51246 14.7111 6.89148 14.7111 6.50846 14.3281L0.623847 8.44351C0.240832 8.0605 0.240832 7.43951 0.623847 7.05649L6.50846 1.17188C6.89148 0.788864 7.51247 0.788864 7.89548 1.17188C8.27849 1.55489 8.27849 2.17588 7.89548 2.5589L2.70437 7.75L7.89548 12.9411C8.27849 13.3241 8.27849 13.9451 7.89548 14.3281Z" fill="white"/>
+													</svg>
+												</button>
+												<button class="splide__arrow splide__arrow--next" aria-label="Next slide" aria-controls="splide02-track">
+													<svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M0.604521 1.17187C0.987536 0.788859 1.60852 0.788859 1.99154 1.17187L7.87615 7.05649C8.25917 7.4395 8.25917 8.06049 7.87615 8.44351L1.99154 14.3281C1.60852 14.7111 0.987536 14.7111 0.604521 14.3281C0.221507 13.9451 0.221507 13.3241 0.604521 12.9411L5.79563 7.75L0.604521 2.55889C0.221507 2.17588 0.221507 1.55489 0.604521 1.17187Z" fill="white"/>
+													</svg>
+												</button>
+											</div>
+											<div class="splide__track">
+												<div class="splide__list">
+													<div class="catalog--psychologists__item--slide splide__slide">
+														<img src="img/psychologist.png" alt="Оксана Сизова">
+													</div>
+													<div class="catalog--psychologists__item--slide splide__slide">
+														<img src="img/psychologist.png" alt="Оксана Сизова">
+													</div>
+												</div>
+											</div>
+											<button class="catalog--psychologists__item--video">
+												<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M18 36C20.3638 36 22.7044 35.5344 24.8883 34.6298C27.0722 33.7253 29.0565 32.3994 30.7279 30.7279C32.3994 29.0565 33.7253 27.0722 34.6298 24.8883C35.5344 22.7044 36 20.3638 36 18C36 15.6362 35.5344 13.2956 34.6298 11.1117C33.7253 8.92784 32.3994 6.94353 30.7279 5.27208C29.0565 3.60062 27.0722 2.27475 24.8883 1.37017C22.7044 0.465584 20.3638 -3.52233e-08 18 0C13.2261 7.11366e-08 8.64773 1.89642 5.27208 5.27208C1.89642 8.64773 0 13.2261 0 18C0 22.7739 1.89642 27.3523 5.27208 30.7279C8.64773 34.1036 13.2261 36 18 36ZM15.566 9.98L26.854 16.252C27.1656 16.4253 27.4253 16.6787 27.6061 16.986C27.7868 17.2934 27.8821 17.6434 27.8821 18C27.8821 18.3566 27.7868 18.7066 27.6061 19.014C27.4253 19.3213 27.1656 19.5747 26.854 19.748L15.566 26.02C15.2005 26.2232 14.7883 26.3273 14.3701 26.3221C13.952 26.3169 13.5425 26.2025 13.1821 25.9903C12.8218 25.7781 12.5232 25.4755 12.3158 25.1123C12.1085 24.7492 11.9996 24.3382 12 23.92V12.08C11.9996 11.6618 12.1085 11.2508 12.3158 10.8877C12.5232 10.5245 12.8218 10.2219 13.1821 10.0097C13.5425 9.79748 13.952 9.68311 14.3701 9.67791C14.7883 9.6727 15.2005 9.77684 15.566 9.98Z" fill="white" fill-opacity="0.8"/>
+												</svg>
+											</button>
+											<div class="catalog--psychologists__item--popupVideos modal">
+												<div class="modal--wrapper">
+													<div class="modal--close">
+														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M0.43934 0.43934C1.02513 -0.146447 1.97487 -0.146447 2.56066 0.43934L23.5607 21.4393C24.1464 22.0251 24.1464 22.9749 23.5607 23.5607C22.9749 24.1464 22.0251 24.1464 21.4393 23.5607L0.43934 2.56066C-0.146447 1.97487 -0.146447 1.02513 0.43934 0.43934Z" fill="white"/>
+															<path fill-rule="evenodd" clip-rule="evenodd" d="M23.5607 0.43934C24.1464 1.02513 24.1464 1.97487 23.5607 2.56066L2.56066 23.5607C1.97487 24.1464 1.02513 24.1464 0.43934 23.5607C-0.146447 22.9749 -0.146447 22.0251 0.43934 21.4393L21.4393 0.43934C22.0251 -0.146447 22.9749 -0.146447 23.5607 0.43934Z" fill="white"/>
+														</svg>
+													</div>
+													<div class="splide splide--video">
+														<div class="splide__arrows">
+															<button class="splide__arrow splide__arrow--prev">
+																<svg width="26" height="17" viewBox="0 0 26 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path d="M1.5 8.5H25M25 8.5L17.5 1M25 8.5L17.5 16" stroke="#697E3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+																</svg>
+															</button>
+															<button class="splide__arrow splide__arrow--next">
+																<svg width="26" height="17" viewBox="0 0 26 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+																	<path d="M1.5 8.5H25M25 8.5L17.5 1M25 8.5L17.5 16" stroke="#697E3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+																</svg>
+															</button>
+														</div>
+														<div class="splide__track">
+															<div class="splide__list">
+																<div class="catalog--psychologists__item--popupVideo splide__slide">
+																	<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/czcrlqjVkfw?si=XqAAdgJRbdm5M7Jc&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+																</div>
+																<div class="catalog--psychologists__item--popupVideo splide__slide">
+																	<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/czcrlqjVkfw?si=XqAAdgJRbdm5M7Jc&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="catalog--psychologists__item--header__info">
+											<div class="catalog--psychologists__item--header__top">
+												<div class="catalog--psychologists__item--header__top--left">
+													<div class="h4">Оксана Сизова</div>
+													<span>Психотерапевт, 30 лет</span>
+												</div>
+												<button class="catalog--psychologists__item--like">
+													<svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M8.63548 0.489402C7.87777 0.166301 7.06563 0 6.24545 0C5.42527 0 4.61312 0.166301 3.85541 0.489402C3.09784 0.812444 2.40952 1.2859 1.82977 1.88273C1.24983 2.47937 0.789455 3.18806 0.475555 3.96769C0.161596 4.74746 0 5.58326 0 6.42732C0 7.27139 0.161596 8.10719 0.475555 8.88696C0.789484 9.66667 1.2496 10.3751 1.82961 10.9718L10.321 19.7105C10.6962 20.0965 11.3044 20.0965 11.6795 19.7105L20.1709 10.9718C21.3421 9.7665 22 8.13182 22 6.42732C22 4.72283 21.3421 3.08815 20.1709 1.88289C18.9997 0.677636 17.4113 0.000528645 15.7551 0.000528645C14.0988 0.000528645 12.5104 0.677636 11.3392 1.88289L11.0003 2.23174L10.6614 1.88306C10.0817 1.28615 9.39312 0.812474 8.63548 0.489402Z" fill="#E9F0DB"/>
+													</svg>
+												</button>
+											</div>
+											<div class="catalog--psychologists__item--header__rating">
+												<div class="main--reviews__slide--rate">
+													<span>5.0</span>
+													<img src="img/rate.png">
+												</div>
+												<a href="#" class="catalog--psychologists__item--header__reviews">
+													<svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M14.529 0.765488H1.59659C0.718465 0.765488 0 1.48395 0 2.36208V14.5361C0 15.4142 1.03778 15.8133 1.6365 15.2146L3.19318 13.6579H14.489C15.3672 13.6579 16.0856 12.9395 16.0856 12.0614V2.36208C16.1255 1.48395 15.4071 0.765488 14.529 0.765488ZM11.7748 6.27372H4.3507C3.71207 6.27372 3.23309 5.75483 3.23309 5.15611C3.23309 4.51747 3.75198 4.03849 4.3507 4.03849H11.7748C12.4135 4.03849 12.8925 4.55739 12.8925 5.15611C12.8925 5.75483 12.4135 6.27372 11.7748 6.27372ZM9.65936 9.86604H4.3507C3.71207 9.86604 3.23309 9.34715 3.23309 8.74843C3.23309 8.1098 3.75198 7.63082 4.3507 7.63082H9.65936C10.298 7.63082 10.777 8.14971 10.777 8.74843C10.8169 9.34715 10.298 9.86604 9.65936 9.86604Z" fill="#697E3C"/>
+													</svg>
+													<span>14 отзывов</span>
+												</a>
+											</div>
+											<div class="catalog--psychologists__item--header__tags">
+												<div class="catalog--psychologists__item--header__tag">
+													<svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M0 8.5C0 3.80716 3.80716 0 8.5 0C13.1928 0 17 3.80716 17 8.5C17 13.1928 13.1928 17 8.5 17C3.80716 17 0 13.1928 0 8.5ZM8.5 1.30769C4.52938 1.30769 1.30769 4.52938 1.30769 8.5C1.30769 12.4706 4.52938 15.6923 8.5 15.6923C12.4706 15.6923 15.6923 12.4706 15.6923 8.5C15.6923 4.52938 12.4706 1.30769 8.5 1.30769Z" fill="#697E3C"/>
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M12.8434 4.73011C13.1199 4.96237 13.1558 5.37481 12.9235 5.65131L7.4312 12.1898C7.30948 12.3347 7.13094 12.4197 6.94172 12.423C6.75249 12.4262 6.57115 12.3473 6.44455 12.2066L4.0907 9.59124C3.84913 9.32283 3.87089 8.90941 4.1393 8.66784C4.40771 8.42627 4.82113 8.44803 5.0627 8.71644L6.91353 10.7729L11.9222 4.81022C12.1545 4.53371 12.5669 4.49785 12.8434 4.73011Z" fill="#697E3C"/>
+													</svg>
+													<span>Опыт 6 лет</span>
+												</div>
+												<div class="catalog--psychologists__item--header__tag">
+													<span>очно и онлайн</span>
+												</div>
+											</div>
+											<div class="catalog--psychologists__item--header__text">
+												<div class="catalog--psychologists__item--header__block">
+													<strong>Город:</strong>
+													<span>Москва, ст. Октябрьская</span>
+												</div>
+												<div class="catalog--psychologists__item--header__block">
+													<strong>Методы:</strong>
+													<span>гештальт, психодрама, семейная терапия</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="catalog--psychologists__item--footer">
+										<div class="catalog--psychologists__item--specializations">
+											<div class="h4">Специализация</div>
+											<div class="catalog--psychologists__item--specializations__list">
+												<div class="catalog--psychologists__item--specializations__item">
+													<svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12.4234 0.243335C12.501 0.320745 12.5625 0.412704 12.6046 0.513946C12.6466 0.615188 12.6682 0.723723 12.6682 0.833335C12.6682 0.942947 12.6466 1.05148 12.6046 1.15272C12.5625 1.25397 12.501 1.34593 12.4234 1.42334L4.92337 8.92334C4.84596 9.00094 4.754 9.06251 4.65276 9.10452C4.55152 9.14653 4.44298 9.16816 4.33337 9.16816C4.22376 9.16816 4.11522 9.14653 4.01398 9.10452C3.91274 9.06251 3.82078 9.00094 3.74337 8.92334L0.410035 5.59C0.253557 5.43352 0.165649 5.22129 0.165649 5C0.165649 4.77871 0.253557 4.56648 0.410035 4.41C0.566513 4.25352 0.778742 4.16562 1.00004 4.16562C1.22133 4.16562 1.43356 4.25352 1.59004 4.41L4.33337 7.155L11.2434 0.243335C11.3208 0.16573 11.4127 0.104159 11.514 0.0621478C11.6152 0.020137 11.7238 -0.00148773 11.8334 -0.00148773C11.943 -0.00148773 12.0515 0.020137 12.1528 0.0621478C12.254 0.104159 12.346 0.16573 12.4234 0.243335Z" fill="#697E3C"/>
+													</svg>
+													<span>Переезд, эмиграция</span>
+												</div>
+												<div class="catalog--psychologists__item--specializations__item">
+													<svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12.4234 0.243335C12.501 0.320745 12.5625 0.412704 12.6046 0.513946C12.6466 0.615188 12.6682 0.723723 12.6682 0.833335C12.6682 0.942947 12.6466 1.05148 12.6046 1.15272C12.5625 1.25397 12.501 1.34593 12.4234 1.42334L4.92337 8.92334C4.84596 9.00094 4.754 9.06251 4.65276 9.10452C4.55152 9.14653 4.44298 9.16816 4.33337 9.16816C4.22376 9.16816 4.11522 9.14653 4.01398 9.10452C3.91274 9.06251 3.82078 9.00094 3.74337 8.92334L0.410035 5.59C0.253557 5.43352 0.165649 5.22129 0.165649 5C0.165649 4.77871 0.253557 4.56648 0.410035 4.41C0.566513 4.25352 0.778742 4.16562 1.00004 4.16562C1.22133 4.16562 1.43356 4.25352 1.59004 4.41L4.33337 7.155L11.2434 0.243335C11.3208 0.16573 11.4127 0.104159 11.514 0.0621478C11.6152 0.020137 11.7238 -0.00148773 11.8334 -0.00148773C11.943 -0.00148773 12.0515 0.020137 12.1528 0.0621478C12.254 0.104159 12.346 0.16573 12.4234 0.243335Z" fill="#697E3C"/>
+													</svg>
+													<span>Выгорание</span>
+												</div>
+												<div class="catalog--psychologists__item--specializations__item">
+													<svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12.4234 0.243335C12.501 0.320745 12.5625 0.412704 12.6046 0.513946C12.6466 0.615188 12.6682 0.723723 12.6682 0.833335C12.6682 0.942947 12.6466 1.05148 12.6046 1.15272C12.5625 1.25397 12.501 1.34593 12.4234 1.42334L4.92337 8.92334C4.84596 9.00094 4.754 9.06251 4.65276 9.10452C4.55152 9.14653 4.44298 9.16816 4.33337 9.16816C4.22376 9.16816 4.11522 9.14653 4.01398 9.10452C3.91274 9.06251 3.82078 9.00094 3.74337 8.92334L0.410035 5.59C0.253557 5.43352 0.165649 5.22129 0.165649 5C0.165649 4.77871 0.253557 4.56648 0.410035 4.41C0.566513 4.25352 0.778742 4.16562 1.00004 4.16562C1.22133 4.16562 1.43356 4.25352 1.59004 4.41L4.33337 7.155L11.2434 0.243335C11.3208 0.16573 11.4127 0.104159 11.514 0.0621478C11.6152 0.020137 11.7238 -0.00148773 11.8334 -0.00148773C11.943 -0.00148773 12.0515 0.020137 12.1528 0.0621478C12.254 0.104159 12.346 0.16573 12.4234 0.243335Z" fill="#697E3C"/>
+													</svg>
+													<span>Депрессия</span>
+												</div>
+												<div class="catalog--psychologists__item--specializations__item">
+													<svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12.4234 0.243335C12.501 0.320745 12.5625 0.412704 12.6046 0.513946C12.6466 0.615188 12.6682 0.723723 12.6682 0.833335C12.6682 0.942947 12.6466 1.05148 12.6046 1.15272C12.5625 1.25397 12.501 1.34593 12.4234 1.42334L4.92337 8.92334C4.84596 9.00094 4.754 9.06251 4.65276 9.10452C4.55152 9.14653 4.44298 9.16816 4.33337 9.16816C4.22376 9.16816 4.11522 9.14653 4.01398 9.10452C3.91274 9.06251 3.82078 9.00094 3.74337 8.92334L0.410035 5.59C0.253557 5.43352 0.165649 5.22129 0.165649 5C0.165649 4.77871 0.253557 4.56648 0.410035 4.41C0.566513 4.25352 0.778742 4.16562 1.00004 4.16562C1.22133 4.16562 1.43356 4.25352 1.59004 4.41L4.33337 7.155L11.2434 0.243335C11.3208 0.16573 11.4127 0.104159 11.514 0.0621478C11.6152 0.020137 11.7238 -0.00148773 11.8334 -0.00148773C11.943 -0.00148773 12.0515 0.020137 12.1528 0.0621478C12.254 0.104159 12.346 0.16573 12.4234 0.243335Z" fill="#697E3C"/>
+													</svg>
+													<span>Чувство одиночества</span>
+												</div>
+												<div class="catalog--psychologists__item--specializations__item">
+													<svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12.4234 0.243335C12.501 0.320745 12.5625 0.412704 12.6046 0.513946C12.6466 0.615188 12.6682 0.723723 12.6682 0.833335C12.6682 0.942947 12.6466 1.05148 12.6046 1.15272C12.5625 1.25397 12.501 1.34593 12.4234 1.42334L4.92337 8.92334C4.84596 9.00094 4.754 9.06251 4.65276 9.10452C4.55152 9.14653 4.44298 9.16816 4.33337 9.16816C4.22376 9.16816 4.11522 9.14653 4.01398 9.10452C3.91274 9.06251 3.82078 9.00094 3.74337 8.92334L0.410035 5.59C0.253557 5.43352 0.165649 5.22129 0.165649 5C0.165649 4.77871 0.253557 4.56648 0.410035 4.41C0.566513 4.25352 0.778742 4.16562 1.00004 4.16562C1.22133 4.16562 1.43356 4.25352 1.59004 4.41L4.33337 7.155L11.2434 0.243335C11.3208 0.16573 11.4127 0.104159 11.514 0.0621478C11.6152 0.020137 11.7238 -0.00148773 11.8334 -0.00148773C11.943 -0.00148773 12.0515 0.020137 12.1528 0.0621478C12.254 0.104159 12.346 0.16573 12.4234 0.243335Z" fill="#697E3C"/>
+													</svg>
+													<span>Отношения в паре</span>
+												</div>
+												<div class="catalog--psychologists__item--specializations__item">
+													<svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12.4234 0.243335C12.501 0.320745 12.5625 0.412704 12.6046 0.513946C12.6466 0.615188 12.6682 0.723723 12.6682 0.833335C12.6682 0.942947 12.6466 1.05148 12.6046 1.15272C12.5625 1.25397 12.501 1.34593 12.4234 1.42334L4.92337 8.92334C4.84596 9.00094 4.754 9.06251 4.65276 9.10452C4.55152 9.14653 4.44298 9.16816 4.33337 9.16816C4.22376 9.16816 4.11522 9.14653 4.01398 9.10452C3.91274 9.06251 3.82078 9.00094 3.74337 8.92334L0.410035 5.59C0.253557 5.43352 0.165649 5.22129 0.165649 5C0.165649 4.77871 0.253557 4.56648 0.410035 4.41C0.566513 4.25352 0.778742 4.16562 1.00004 4.16562C1.22133 4.16562 1.43356 4.25352 1.59004 4.41L4.33337 7.155L11.2434 0.243335C11.3208 0.16573 11.4127 0.104159 11.514 0.0621478C11.6152 0.020137 11.7238 -0.00148773 11.8334 -0.00148773C11.943 -0.00148773 12.0515 0.020137 12.1528 0.0621478C12.254 0.104159 12.346 0.16573 12.4234 0.243335Z" fill="#697E3C"/>
+													</svg>
+													<span>Потеря мотивации</span>
+												</div>
+												<div class="catalog--psychologists__item--specializations__item">
+													<svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12.4234 0.243335C12.501 0.320745 12.5625 0.412704 12.6046 0.513946C12.6466 0.615188 12.6682 0.723723 12.6682 0.833335C12.6682 0.942947 12.6466 1.05148 12.6046 1.15272C12.5625 1.25397 12.501 1.34593 12.4234 1.42334L4.92337 8.92334C4.84596 9.00094 4.754 9.06251 4.65276 9.10452C4.55152 9.14653 4.44298 9.16816 4.33337 9.16816C4.22376 9.16816 4.11522 9.14653 4.01398 9.10452C3.91274 9.06251 3.82078 9.00094 3.74337 8.92334L0.410035 5.59C0.253557 5.43352 0.165649 5.22129 0.165649 5C0.165649 4.77871 0.253557 4.56648 0.410035 4.41C0.566513 4.25352 0.778742 4.16562 1.00004 4.16562C1.22133 4.16562 1.43356 4.25352 1.59004 4.41L4.33337 7.155L11.2434 0.243335C11.3208 0.16573 11.4127 0.104159 11.514 0.0621478C11.6152 0.020137 11.7238 -0.00148773 11.8334 -0.00148773C11.943 -0.00148773 12.0515 0.020137 12.1528 0.0621478C12.254 0.104159 12.346 0.16573 12.4234 0.243335Z" fill="#697E3C"/>
+													</svg>
+													<span>Созависимые отношения</span>
+												</div>
+												<div class="catalog--psychologists__item--specializations__item">
+													<svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12.4234 0.243335C12.501 0.320745 12.5625 0.412704 12.6046 0.513946C12.6466 0.615188 12.6682 0.723723 12.6682 0.833335C12.6682 0.942947 12.6466 1.05148 12.6046 1.15272C12.5625 1.25397 12.501 1.34593 12.4234 1.42334L4.92337 8.92334C4.84596 9.00094 4.754 9.06251 4.65276 9.10452C4.55152 9.14653 4.44298 9.16816 4.33337 9.16816C4.22376 9.16816 4.11522 9.14653 4.01398 9.10452C3.91274 9.06251 3.82078 9.00094 3.74337 8.92334L0.410035 5.59C0.253557 5.43352 0.165649 5.22129 0.165649 5C0.165649 4.77871 0.253557 4.56648 0.410035 4.41C0.566513 4.25352 0.778742 4.16562 1.00004 4.16562C1.22133 4.16562 1.43356 4.25352 1.59004 4.41L4.33337 7.155L11.2434 0.243335C11.3208 0.16573 11.4127 0.104159 11.514 0.0621478C11.6152 0.020137 11.7238 -0.00148773 11.8334 -0.00148773C11.943 -0.00148773 12.0515 0.020137 12.1528 0.0621478C12.254 0.104159 12.346 0.16573 12.4234 0.243335Z" fill="#697E3C"/>
+													</svg>
+													<span>Личные границы</span>
+												</div>
+												<div class="catalog--psychologists__item--specializations__item">
+													<svg width="13" height="10" viewBox="0 0 13 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12.4234 0.243335C12.501 0.320745 12.5625 0.412704 12.6046 0.513946C12.6466 0.615188 12.6682 0.723723 12.6682 0.833335C12.6682 0.942947 12.6466 1.05148 12.6046 1.15272C12.5625 1.25397 12.501 1.34593 12.4234 1.42334L4.92337 8.92334C4.84596 9.00094 4.754 9.06251 4.65276 9.10452C4.55152 9.14653 4.44298 9.16816 4.33337 9.16816C4.22376 9.16816 4.11522 9.14653 4.01398 9.10452C3.91274 9.06251 3.82078 9.00094 3.74337 8.92334L0.410035 5.59C0.253557 5.43352 0.165649 5.22129 0.165649 5C0.165649 4.77871 0.253557 4.56648 0.410035 4.41C0.566513 4.25352 0.778742 4.16562 1.00004 4.16562C1.22133 4.16562 1.43356 4.25352 1.59004 4.41L4.33337 7.155L11.2434 0.243335C11.3208 0.16573 11.4127 0.104159 11.514 0.0621478C11.6152 0.020137 11.7238 -0.00148773 11.8334 -0.00148773C11.943 -0.00148773 12.0515 0.020137 12.1528 0.0621478C12.254 0.104159 12.346 0.16573 12.4234 0.243335Z" fill="#697E3C"/>
+													</svg>
+													<span>Тревожность</span>
+												</div>
+												<button class="catalog--psychologists__item--specializations__all">
+													<span>Смотреть все</span>
+													<svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M12.1406 7.35944L6.50005 13L0.859467 7.35944" stroke="#2A2A2A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+														<path d="M6.5 12.9999L6.5 1" stroke="#2A2A2A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+													</svg>
+												</button>
+											</div>
+										</div>
+										<div class="catalog--psychologists__item--price">
+											<span>Стоимость онлайн консультации</span>
+											<strong>3000₽</strong>
+										</div>
+										<a href="catalog-cart.html" class="button">Подробнее о психологе</a>
+									</div>
+								</div>
+								<a href="#showcatalog" class="button button--white" id="loadMoreButton">Загрузить еще</a>
+							</div>
+							<button class="catalog--psychologists__filterButton button button--white">
+								<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M24 6.5C24 9.26142 21.7614 11.5 19 11.5C16.2386 11.5 14 9.26142 14 6.5C14 3.73858 16.2386 1.5 19 1.5C21.7614 1.5 24 3.73858 24 6.5Z" fill="#FFA25C"/>
+									<path d="M12.6736 3.5H4C3.44772 3.5 3 3.94772 3 4.5V8.5C3 8.79678 3.13182 9.07823 3.35982 9.26822L9 13.9684V21.5C9 21.8466 9.17945 22.1684 9.47427 22.3507C9.76909 22.5329 10.1372 22.5494 10.4472 22.3944L14.4472 20.3944C14.786 20.225 15 19.8788 15 19.5V13.9684L16.2401 12.9349C15.5869 12.6544 14.9849 12.2773 14.4521 11.8215L13.3598 12.7318C13.1318 12.9218 13 13.2032 13 13.5V18.882L11 19.882V13.5C11 13.2032 10.8682 12.9218 10.6402 12.7318L5 8.03162V5.5H12.0709C12.1719 4.79385 12.3783 4.12171 12.6736 3.5Z" fill="#FFA25C"/>
+								</svg>
+								<span>Фильтры</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="catalog--categories">
+				<div class="container">
+					<div class="row">
+						<div class="h2">Удобный выбор категорий</div>
+						<div class="catalog--categories__block">
+							<div class="h3">Психологи</div>
+							<div class="catalog--categories__buttons">
+								<button class="button button--green active" data-type="1">По типу</button>
+								<button class="button button--green" data-type="2">По метро</button>
+								<button class="button button--green" data-type="3">По округу</button>
+								<button class="button button--green" data-type="4">По району</button>
+								<button class="button button--green" data-type="5">Дополнительные фильтры</button>
+							</div>
+							<div class="catalog--categories__list">
+								<div class="catalog--categories__item active" data-category="1">
+									<a href="#">Клинические психологи</a>
+									<a href="#">Детские психологи</a>
+									<a href="#">Семейные психологи</a>
+									<a href="#">Психологи онлайн</a>
+									<a href="#">Подростковые психологи</a>
+									<a href="#">Сексолог</a>
+									<a href="#">Психиатр</a>
+								</div>
+								<div class="catalog--categories__item" data-category="2">
+									<a href="#">Психиатр</a>
+									<a href="#">Клинические психологи</a>
+									<a href="#">Детские психологи</a>
+									<a href="#">Семейные психологи</a>
+									<a href="#">Психологи онлайн</a>
+									<a href="#">Подростковые психологи</a>
+									<a href="#">Сексолог</a>
+								</div>
+								<div class="catalog--categories__item" data-category="3">
+									<a href="#">Детские психологи</a>
+									<a href="#">Клинические психологи</a>
+									<a href="#">Психологи онлайн</a>
+									<a href="#">Семейные психологи</a>
+									<a href="#">Сексолог</a>
+									<a href="#">Подростковые психологи</a>
+									<a href="#">Психиатр</a>
+								</div>
+								<div class="catalog--categories__item" data-category="4">
+									<a href="#">Психологи онлайн</a>
+									<a href="#">Детские психологи</a>
+									<a href="#">Клинические психологи</a>
+									<a href="#">Сексолог</a>
+									<a href="#">Семейные психологи</a>
+									<a href="#">Психиатр</a>
+									<a href="#">Подростковые психологи</a>
+								</div>
+								<div class="catalog--categories__item" data-category="5">
+									<a href="#">Сексолог</a>
+									<a href="#">Детские психологи</a>
+									<a href="#">Клинические психологи</a>
+									<a href="#">Психологи онлайн</a>
+									<a href="#">Семейные психологи</a>
+									<a href="#">Подростковые психологи</a>
+									<a href="#">Психиатр</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="footer--wrapper">
+						<div class="footer--block">
+							<div class="h4">О нас</div>
+							<ul>
+								<li><a href="#">Вопрос-ответ</a></li>
+								<li><a href="#">Политика обработки персональных данных</a></li>
+								<li><a href="#">Пользовательское соглашение</a></li>
+							</ul>
+						</div>
+						<div class="footer--block">
+							<div class="h4">Клиентам</div>
+							<ul>
+								<li><a href="catalog.html">Каталог психологов</a></li>
+								<li><a href="#">Личный кабинет</a></li>
+								<li><a href="#">Статьи</a></li>
+							</ul>
+						</div>
+						<div class="footer--block">
+							<div class="h4">Психологам</div>
+							<ul>
+								<li><a href="#">Личный кабинет партнёра</a></li>
+								<li><a href="#">Добавить карточку психолога</a></li>
+								<li><a href="#">Контакты</a></li>
+							</ul>
+						</div>
+						<div class="footer--block">
+							<a href="#" class="button">Задать вопрос</a>
+							<div class="footer--block__copyright">© 2024. Все права защищены</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+
+	<div class="modal modal--login modal--general">
+		<div class="modal--wrapper">
+			<div class="modal--close">
+				<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L15.7071 14.2929C16.0976 14.6834 16.0976 15.3166 15.7071 15.7071C15.3166 16.0976 14.6834 16.0976 14.2929 15.7071L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z" fill="#404040"/>
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M15.7071 0.292893C16.0976 0.683417 16.0976 1.31658 15.7071 1.70711L1.70711 15.7071C1.31658 16.0976 0.683417 16.0976 0.292893 15.7071C-0.0976311 15.3166 -0.0976311 14.6834 0.292893 14.2929L14.2929 0.292893C14.6834 -0.0976311 15.3166 -0.0976311 15.7071 0.292893Z" fill="#404040"/>
+				</svg>
+			</div>
+			<div class="h3">Вход</div>
+			<form action="#" class="modal--form">
+				<div class="modal--form__block">
+					<div class="modal--form__block--wrapper">
+						<span>Нет аккаунта?</span>
+						<a href="#">Регистрация</a>
+					</div>
+				</div>
+				<div class="modal--form__block">
+					<input type="email" id="email_login" name="email_login" placeholder="Email*" required>
+				</div>
+				<div class="modal--form__block">
+					<input type="text" id="password" name="password" placeholder="Пароль*" required>
+				</div>
+				<div class="modal--form__accept">
+					<div class="modal--form__accept--block">
+						<div class="radio--button">
+							<input type="checkbox" name="remember" id="remember" class="custom--check" checked>
+							<label for="remember">
+								<div>Запомнить меня</div>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="modal--form__block">
+					<div class="modal--form__block--wrapper">
+						<span>Забыли пароль?</span>
+						<a href="#">Восстановить</a>
+					</div>
+				</div>
+				<button class="button">Войти</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="modal--cookie">
+		<div class="modal--cookie__close">
+			<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M0.21967 0.21967C0.512563 -0.0732233 0.987437 -0.0732233 1.28033 0.21967L11.7803 10.7197C12.0732 11.0126 12.0732 11.4874 11.7803 11.7803C11.4874 12.0732 11.0126 12.0732 10.7197 11.7803L0.21967 1.28033C-0.0732233 0.987437 -0.0732233 0.512563 0.21967 0.21967Z" fill="#606060"/>
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M11.7803 0.21967C12.0732 0.512563 12.0732 0.987437 11.7803 1.28033L1.28033 11.7803C0.987437 12.0732 0.512563 12.0732 0.21967 11.7803C-0.0732233 11.4874 -0.0732233 11.0126 0.21967 10.7197L10.7197 0.21967C11.0126 -0.0732233 11.4874 -0.0732233 11.7803 0.21967Z" fill="#606060"/>
+			</svg>
+		</div>
+		<div class="modal--cookie__title">Мы используем файлы cookie</div>
+		<div class="modal--cookie__text">
+			Это нужно, чтобы улучшить работу сайта и обеспечить удобство его использования. Продолжая использовать сайт, Вы даете согласие на обработку персональных данных и использование cookies.
+		</div>
+		<a href="#">Подробнее</a>
+	</div>
+
+	<script src="js/scripts.min.js"></script>
+
+</body>
+</html>
